@@ -48,6 +48,7 @@ jobs:
           context: .
           file: ./Containerfile
           push: true
+          platforms: linux/amd64,linux/arm64
           tags: |
             ghcr.io/${{ github.repository }}:${{ env.TAG }}
             ${{ steps.is_stable.outputs.stable == 'true' && format('ghcr.io/{0}:latest', github.repository) || '' }}
