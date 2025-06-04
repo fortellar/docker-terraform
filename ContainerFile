@@ -8,7 +8,7 @@ RUN apk add --no-cache \
     git \
     bash \
     python3 \
-    py3-pip
+    py3-pre-commit
 
 # Install Terraform (latest)
 RUN LATEST_TF=$(curl -s https://releases.hashicorp.com/terraform/ | grep -Eo 'terraform/[0-9.]+/' | head -1 | cut -d'/' -f2) && \
@@ -30,8 +30,5 @@ RUN LATEST_TFLINT=$(curl -s https://api.github.com/repos/terraform-linters/tflin
     unzip tflint.zip && \
     mv tflint /usr/local/bin/ && \
     rm tflint.zip
-
-# Install pre-commit
-RUN pip install pre-commit
 
 ENTRYPOINT ["/bin/sh"]
