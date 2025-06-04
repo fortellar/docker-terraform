@@ -1,4 +1,4 @@
-# Fortellar Terraform Docer
+# Fortellar Terraform Docker
 
 This repo contains the elements for the base Fortellar base Docker container used for deploying Terraform and validating it.
 
