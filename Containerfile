@@ -9,7 +9,8 @@ RUN apk add --no-cache \
     bash \
     python3 \
     pipx \
-    npm
+    npm \
+    jq
 
 # Install Terraform (latest)
 RUN LATEST_TF=$(curl -s https://releases.hashicorp.com/terraform/ | grep -Eo 'terraform/[0-9.]+/' | head -1 | cut -d'/' -f2) && \
