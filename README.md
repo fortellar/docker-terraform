@@ -8,6 +8,7 @@ Currently it supports the following
 1. Terraform-Docs
 1. TFLint
 1. PreCommit
+1. AWS CLI v2
 
 ## Release
 All tagged releases will create a docker image, and stable releases according to [symver](https://semver.org/) will co-release to `latest`
