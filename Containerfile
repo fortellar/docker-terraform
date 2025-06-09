@@ -32,6 +32,12 @@ RUN LATEST_TFLINT=$(curl -s https://api.github.com/repos/terraform-linters/tflin
     mv tflint /usr/local/bin/ && \
     rm tflint.zip
 
+# Install AWS CLI v2
+RUN curl -Lo awscliv2.zip "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" \
+    && unzip awscliv2.zip \
+    && ./aws/install \
+    && rm -rf awscliv2.zip aws
+
 # Install pre-commit - PEP 668 compliant
 RUN pipx install pre-commit
 
