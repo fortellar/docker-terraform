@@ -9,6 +9,7 @@ RUN apk add --no-cache \
     bash \
     python3 \
     pipx \
+    py3-pip \
     npm \
     jq \
     aws-cli
